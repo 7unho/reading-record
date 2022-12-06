@@ -1,6 +1,6 @@
 # ref. [Effective Java 3/E]()
 
-## Item1. 생성자 대신 정적 팩터리 메서드를 고려하라
+## [`Item1`] 생성자 대신 정적 팩터리 메서드를 고려하라
 ___
 
 > 클래스는 생성자와 별도로 정적 팩터리 메서드(Static Factory Method, 디자인 패턴에서의 Factory Method가 아닌)를 제공할 수 있다.
