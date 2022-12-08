@@ -19,7 +19,14 @@ public class Stack {
 
     public Object pop(){
         if(size == 0) throw new EmptyStackException();
-        return elements[--size];
+
+        // 스택을 pop할 떄, 참조 해제가 이뤄지지 않는다.
+        // return elements[--size];
+        Object result = elements[--size];
+
+        // 다 쓴 객체 참조 해제
+        elements[size] = null;
+        return result;
     }
 
 //    원소를 위한 공간을 적어도 하나 이상 확보한다.
