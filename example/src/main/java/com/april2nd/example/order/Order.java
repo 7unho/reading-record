@@ -14,7 +14,7 @@ public class Order {
         this.shippingInfo = shippingInfo;
     }
 
-    public void changeChippingInfo(ShippingInfo newShippingInfo) {
+    public void changeShippingInfo(ShippingInfo newShippingInfo) {
         //
         if (!state.isShippingChangeable()) {
             throw new IllegalStateException("can't change shipping in " + state);

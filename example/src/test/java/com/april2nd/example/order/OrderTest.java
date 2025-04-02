@@ -1,6 +1,5 @@
 package com.april2nd.example.order;
 
-import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -25,7 +24,7 @@ class OrderTest {
                 .shippingInfo(before)
                 .build();
         // when
-        order.changeChippingInfo(after);
+        order.changeShippingInfo(after);
         // then
         assertAll(
                 () -> assertThat(order.getShippingInfo().getAddress()).isEqualTo("INCHEON"),
@@ -50,7 +49,7 @@ class OrderTest {
                 .shippingInfo(before)
                 .build();
         // when
-        order.changeChippingInfo(after);
+        order.changeShippingInfo(after);
         // then
         assertAll(
                 () -> assertThat(order.getShippingInfo().getAddress()).isEqualTo("INCHEON"),
@@ -77,7 +76,7 @@ class OrderTest {
         // when
         // then
         assertThatThrownBy(() -> {
-            order.changeChippingInfo(after);
+            order.changeShippingInfo(after);
         }).isInstanceOf(IllegalStateException.class);
     }
 
@@ -100,7 +99,7 @@ class OrderTest {
         // when
         // then
         assertThatThrownBy(() -> {
-            order.changeChippingInfo(after);
+            order.changeShippingInfo(after);
         }).isInstanceOf(IllegalStateException.class);
     }
 
@@ -123,7 +122,7 @@ class OrderTest {
         // when
         // then
         assertThatThrownBy(() -> {
-            order.changeChippingInfo(after);
+            order.changeShippingInfo(after);
         }).isInstanceOf(IllegalStateException.class);
     }
 }
