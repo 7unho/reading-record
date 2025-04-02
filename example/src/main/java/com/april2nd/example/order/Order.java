@@ -56,7 +56,7 @@ public class Order {
     }
 
     private void verifyNotYetShipped() {
-        if (state.isShippingChangeable()) {
+        if (!state.isShippingChangeable()) {
             throw new IllegalStateException("already shipped");
         }
     }
