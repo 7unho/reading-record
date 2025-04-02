@@ -5,12 +5,24 @@ import lombok.Getter;
 
 @Getter
 public class ShippingInfo {
-    private String address;
-    private String message;
+    private String receiverName;
+    private String receiverPhoneNumber;
+    private String shippingAddress1;
+    private String shippingAddress2;
+    private String shippingZipcode;
 
     @Builder
-    public ShippingInfo(String address, String message) {
-        this.address = address;
-        this.message = message;
+
+    public ShippingInfo(
+            String receiverName,
+            String receiverPhoneNumber,
+            String shippingAddress1,
+            String shippingAddress2,
+            String shippingZipcode) {
+        this.receiverName = receiverName;
+        this.receiverPhoneNumber = receiverPhoneNumber;
+        this.shippingAddress1 = shippingAddress1;
+        this.shippingAddress2 = shippingAddress2;
+        this.shippingZipcode = shippingZipcode;
     }
 }
