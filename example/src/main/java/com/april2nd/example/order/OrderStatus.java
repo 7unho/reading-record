@@ -11,7 +11,7 @@ public enum OrderStatus {
             return true;
         }
     },
-    SHIPPED, DELIVERING, DELIVERY_COMPLETED;
+    SHIPPED, DELIVERING, DELIVERY_COMPLETED, CANCELED;
 
     /*
     1. 주문 취소는 배송 전에만 할 수 있다.
